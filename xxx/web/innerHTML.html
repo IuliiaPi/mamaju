@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>innerHTML</title>
+</head>
+<body>
+
+<p id="a"> Hi </p>
+
+<script>
+    var a,b,c;
+    a=2;
+    b=3;
+    c=a+b;
+    document.getElementById("a").innerHTML = "Hello " + a + b + c + (a+b);
+</script>
+
+
+//---------- Fahrenheit to Celsius --------------------------------------
+
+
+<h3> Fahrenheit to Celsius : </h3>
+<p id="F_to_C"> </p>
+
+<script>
+    function toCelsius(f) {
+return(5/9)*(f-32);
+    }
+    document.getElementById("F_to_C").innerHTML = "Temperature  = " + (toCelsius(350)).toFixed(2) + " C";
+</script>
+
+//---------- Sum --------------------------------------
+
+<p id="summ"> Hi </p>
+
+<script>
+    var x = sum(1,4);
+    document.getElementById("summ").innerHTML = x;
+    function sum(a,b) {
+        return a +b;
+    }
+</script>
+
+<!------------------------------------------------->
+
+<button type="button" onclick="hi()"> press </button>
+
+<p id="b"> </p>
+<p id="c"> </p>
+<p id="d"> Have a good one! </p>
+
+<script>
+    function hi() {
+document.getElementById("b").innerHTML = "Hello, Julia!!!" + "<br>" + ":)";
+        document.getElementById("c").innerHTML = "How are you?";
+        var text = document.getElementById("d").innerHTML;
+        document.getElementById("d").innerHTML = text.toUpperCase();
+    }
+</script>
+
+<!---- Object -------------------------------------------->
+
+<p id="object">  </p>
+
+<script>
+    var person = {
+        firstName: "Anna",
+        lastName: "V",
+        age: 4,
+        eyeColor: "blue",
+        fullName: function () {
+return this.firstName + " " + this.lastName;
+        }
+    };
+    document.getElementById("object").innerHTML = person.fullName() + " with " + person.eyeColor + " eyes " + ".";
+</script>
+
+<!------ Date 1 ------------------------------------------->
+
+<button onclick="document.getElementById('time').innerHTML = Date()"> Time? </button>
+<p id="time"> </p>
+
+<!------- Date 2 ------------------------------------------>
+
+<button onclick="this.innerHTML = Date()"> Time? </button>
+
+<!-------- Date 3 ----------------------------------------->
+
+<button onclick="displayDate()"> Time </button>
+<script>
+    function displayDate() {
+document.getElementById("time1").innerHTML = Date();
+    }
+</script>
+<p id="time1"> </p>
+
+<!---------- Array --------------------------------------->
+
+<p id="array">  </p>
+
+<script>
+    var cars = ["A", "B", "C"];
+    var i;
+    var text = "<ul>";
+    for (i=0; i<cars.length; i++){
+        text += "<li>" + cars[i] + "</li>";
+    }
+    document.getElementById("array").innerHTML = text;
+
+</script>
+
+<!------------------------------------------------->
+
+<button onclick="plus()"> press </button>  <!-??????->
+
+<p id="massiv">  </p>
+
+<script>
+    var cars = ["A", "B", "C"];
+   // document.getElementById("massiv").innerHTML = cars;
+       document.getElementById("massiv").innerHTML = cars.join(" * ");
+    // document.getElementById("massiv").innerHTML = cars[0];
+    //   document.getElementById("massiv").innerHTML = cars.length;
+
+    function plus() {
+        cars[cars.length] = "D";
+        document.getElementById("massiv").innerHTML = cars;
+    }
+</script>
+
+<!------------------------------------------------->
+
+<p id="array1">  </p>
+<p id="array2">  </p>
+<p id="array3">  </p>
+<p id="array4">  </p>
+<p id="array5">  </p>
+<p id="array6">  </p>
+<p id="array7">  </p>
+
+<script>
+    var fruits = ["Orange", "Apple", "Banana", "Mango"];
+    var vegetables = ["Tomato", "Peas", "Beans", "Carot"];
+
+    document.getElementById("array1").innerHTML = fruits;
+    fruits[0]="Lemon";
+    document.getElementById("array2").innerHTML = fruits;
+    fruits.splice(2,0,"Kivy","Pear");
+    document.getElementById("array3").innerHTML = fruits;
+    fruits.splice(0,1);
+    document.getElementById("array4").innerHTML = fruits;
+    fruits.sort();
+    document.getElementById("array5").innerHTML = fruits;
+    fruits.sort();
+    fruits.reverse();
+    document.getElementById("array6").innerHTML = fruits;
+
+    var all = fruits.concat(vegetables);
+    document.getElementById("array7").innerHTML = all;
+
+</script>
+
+<!------------------------------------------------->
+
+<p id="number1">  </p>
+<p id="number2">  </p>
+
+<script>
+    var number = [4,6,3,12,45,8,21];
+
+    document.getElementById("number1").innerHTML = number;
+    function sorty(){
+    fruits.sort(
+        function (a,b) {
+return a-b
+        }
+    );
+    document.getElementById("number2").innerHTML = number;}
+
+
+</script>
+
+<!------------------------------------------------->
+
+</body>
+</html>
+
+
+<!--------------------------------------------------
+
+<button onclick="document.write(1+1)"> Press </button>

@@ -1,0 +1,20 @@
+div.table {
+    height: 0;
+}
+
+div.td {
+    height: 100%;
+    float: left;
+}
+
+#main {
+    width: 100%;
+}
+
+#first {
+    width: 60%;
+}
+
+#second {
+    width: 40%;
+}

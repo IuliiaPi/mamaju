@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web</title>
+
+    <style>
+        body {
+            background-color: lightskyblue;
+        }
+
+        #field {
+            height: 800px;
+            border-bottom: 3px limegreen groove;
+            position: relative;
+        }
+
+        #spider {
+            position: absolute;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div id="field">
+
+    <svg width="800" height="800">
+
+
+        <use xlink:href="#snowflak"  x="300" y="20" />
+
+        <use xlink:href="#spider"  x="200" y="100">
+        <animate
+            attributeName="y"
+            attributeType="XML"
+            begin="0s"
+            dur="15s"
+            from="100"
+            to="450"
+fill="freeze"
+       repeatCount="2"    >
+        </animate>
+        </use>
+
+        <line id="thread" x1="400" y1="220" x2="400" y2="375"
+              stroke="white" stroke-width="3" opacity="0.5">
+
+        <animate attributeName="y2"
+                 from="375"
+                 to="723"
+                 begin="0s"
+                 dur="15s"
+                 fill="freeze"
+               repeatCount="2" />
+        </line>
+
+
+        <defs>
+            <g id="snowflak" stroke="white" stroke-width="3" opacity="0.5">
+                <line x1="100" y1="-20" x2="100" y2="200"/>
+                <line x1="-20" y1="100" x2="220" y2="100"/>
+                <line x1="10" y1="10" x2="195" y2="195"/>
+                <line x1="195" y1="10" x2="10" y2="195"/>
+
+                <path d="M100,0 L175,25 200,100 175,175 100,200 25,175 0,100 25,25 z"
+                      style="fill: none;"/>
+                <path d="M100,35 L100,35 155,50 165,100 150,150 100,170 50,150 30,100 50,50 z"
+                      style="fill: none;"/>
+                <path d="M100,60 L130 72 140,100 130,130 100,140 70,135 58,100 70,70 z"
+                      style="fill: none;"/>
+            </g>
+        </defs>
+
+        <defs>
+        <g id="spider">
+
+            <ellipse cx="200" cy="300" rx="50" ry="25"
+                     style="fill:gray; stroke:black; stroke-width:2;"/>
+
+            <circle class="eye" cx="215" cy="310" r="7" fill="cornflowerblue"
+                    style="stroke: black;stroke-width: 1px;"
+            />
+            <circle class="eye" cx="185" cy="310" r="7" fill="cornflowerblue"
+                    style="stroke: black;stroke-width: 1px;"
+            />
+
+            <g id="legs" stroke="black" stroke-width="2px" fill="none">
+                <polyline
+                    points="240,285 300,255 350,300"/>
+                <polyline
+                    points="245,290 300,270 345,310"/>
+                <polyline
+                    points="250,300 300,285 340,320"/>
+                <polyline
+                    points="245,310 300,300 335,330"/>
+
+                <polyline
+                    points="160,285 110,255 50,300"/>
+                <polyline
+                    points="155,290 110,270 55,310"/>
+                <polyline
+                    points="150,300 110,285 60,320"/>
+                <polyline
+                    points="155,310 110,300 65,330"/>
+            </g>
+
+        </g>
+            </defs>
+
+    </svg>
+
+</div>
+
+<script>
+    let spider = document.getElementById("spider");
+    spider.onclick = function () {
+        let start = Date.now();
+        let timer = setInterval(function () {
+            let timePassed = Date.now() - start;
+            spider.style.top = timePassed / 5 + "px";
+
+            console.log(spider.style.top)
+            if (timePassed > 2000) clearInterval(timer);
+        }, 20);
+    }
+
+    Array.from(document.getElementsByClassName('eye')).forEach(e => {
+        e.onmouseover = function () {
+            e.setAttribute('r', '2');
+            e.setAttribute('fill', 'yellow')
+        }
+        e.onmouseout = function () {
+            e.setAttribute('r', '7');
+            e.setAttribute('fill', 'cornflowerblue')
+        }
+    })
+function thread() {
+document.getElementById("thread").setAttribute('y2','400');
+}
+
+
+</script>
+
+</body>
+</html>
+
+
+<animateTransform
+    attributeName="transform"
+    type="scale"
+    begin="0s"
+    dur="5s"
+    from="0 0"
+    to="1 1"
+    repeatCount="indefinite"
+    additive="sum">
+</animateTransform>

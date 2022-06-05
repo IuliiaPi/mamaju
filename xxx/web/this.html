@@ -1,0 +1,17 @@
+<script>
+
+    var x = 11;
+
+    function f() {
+        return this.x;
+    }
+
+    var f2 = {
+        x:13,
+        z: function () {
+            f()
+        }
+    }
+
+    console.log(f2.z())
+</script>

@@ -1,0 +1,54 @@
+*{
+padding: 0;
+margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: beige;
+    min-height: 100vh;
+}
+
+input{
+    border-radius: 4px;
+    padding: 2px;
+}
+
+input[type="checkbox"]{
+margin: 3px 0;
+}
+
+.julia-form{
+    width: 400px;
+    margin: 100px auto;
+    background-color: #437BEA;
+padding: 40px;
+}
+
+.julia-form > * {
+    margin: 20px 0;
+}
+
+.questions{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    border: 0;
+    gap: 10px 0;
+    justify-items: end;
+}
+
+.password{
+    position: relative;
+}
+
+.eye, .eye-slash {
+    position: absolute;
+}
+
+.invalid{
+    border: 2px solid red;
+}
+
+.focused{
+    background: red;
+}

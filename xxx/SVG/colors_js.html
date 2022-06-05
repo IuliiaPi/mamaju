@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Colors</title>
+
+
+    <style>
+        body {
+            font-family: Georgia, serif;
+            font-size: 100%;
+            line-height: 175%;
+
+            background-color: beige;
+            margin: 0 2%;
+            /* border: 1px solid #9acd32;*/
+        }
+
+        h1 {
+            text-align: left;
+            font: bold 1.5em "Marck Script", Georgia, serif;
+            /*font-family: "Marck Script", Georgia, serif;
+        font-size: 1.5em;*/
+            /*основной заголовок (h1) в 1.5 раза больше, чем размер основной части текста*/
+            /* text-shadow: .1em .1em .2em lightslategray;*/
+        }
+
+        #message {
+            text-align: left;
+            font: bold 1em "Marck Script", Georgia, serif;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1> Click the correct colors to continue the patterns. </h1>
+
+<svg width="900" height="100">
+    <defs>
+        <g id="shape">
+            <circle cx="0" cy="0" r="40"
+                    stroke="green" stroke-width="4" opacity="0.5"/>
+        </g>
+    </defs>
+    <use xlink:href="#shape" x="50" y="50" fill="blue"/>
+    <use xlink:href="#shape" x="150" y="50" fill="red"/>
+    <use xlink:href="#shape" x="250" y="50" fill="blue"/>
+    <use xlink:href="#shape" x="350" y="50" style="fill: white;" id="white_circle"/>
+
+    <line id="line" x1="420" y1="0" x2="420" y2="100"
+          stroke="red" stroke-width="5" opacity="0.5"/>
+
+    <use xlink:href="#shape" x="500" y="50" fill="pink" class="incorrect"/>
+    <use xlink:href="#shape" x="600" y="50" style="fill: red;" id="circle"/>
+    <use xlink:href="#shape" x="700" y="50" fill="blue" class="incorrect"/>
+    <use xlink:href="#shape" x="800" y="50" fill="purple" class="incorrect"/>
+
+</svg>
+
+<br>
+
+<div id="message"></div>
+
+<script>
+
+    let board = [
+        {
+            left: [
+                {type: 'circle', color: 'red',},
+                {type: 'circle', color: 'blue'},
+                {type: 'circle', color: 'red'},
+                {type: 'circle', color: 'white'}
+            ],
+            right: [
+                {type: 'circle', color: 'blue', correct: true},
+                {type: 'circle', color: 'red'},
+                {type: 'circle', color: 'pink'},
+                {type: 'circle', color: 'purple'},
+            ]
+        },
+        {
+            left: [
+                {type: 'circle', color: 'yellow'},
+                {type: 'circle', color: 'yellow'},
+                {type: 'circle', color: 'red'},
+                {type: 'circle', color: 'white'}
+            ],
+            right: [
+                {type: 'circle', color: 'yellow', correct: true},
+                {type: 'circle', color: 'white'},
+                {type: 'circle', color: 'orange'},
+                {type: 'circle', color: 'red'},
+            ]
+        }
+    ];
+
+
+    let svg = document.getElementById('white_circle');
+    let button = document.getElementById('circle');
+    let otherButtons = document.getElementsByClassName('incorrect');
+
+    button.onclick = function () {
+        message.innerHTML = "Good job!";
+        message.style.color = "green";
+        svg.style.fill = button.style.fill;
+    }
+
+    for (const otherButton of otherButtons) {
+        // for (let i = 0; i < otherButtons.length; i++) {
+        //     const otherButton = otherButtons[i];
+        // console.log(otherButtons)
+        otherButton.onclick = function () {
+            message.innerHTML = "Please try again";
+            message.style.color = "sandybrown";
+            svg.style.fill = "white";
+        }
+    }
+</script>
+
+</body>
+</html>
+

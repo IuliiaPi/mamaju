@@ -1,0 +1,51 @@
+html{
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: beige;
+    /*height: 100%;*/
+}
+h1{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+input{
+    margin:10px;
+}
+
+#next, #previoug_guestion{
+
+}
+
+button{
+    background-color: lightskyblue;
+    /*position: center;*/
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.3px;
+}
+
+/*------Footer----------------------------------------*/
+
+/*.footer{*/
+/*    background-color: antiquewhite;*/
+/*}*/
+
+.footer_row{
+    display: flex;
+    height: 45px;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_text{
+    color: cadetblue;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+}
+
+
+

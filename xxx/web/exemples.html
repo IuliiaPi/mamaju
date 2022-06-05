@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemples</title>
+</head>
+<body>
+
+<div>Users:</div>
+<ul>
+    <li>Джон</li>
+    <li>Пит</li>
+</ul>
+
+<script>
+    console.log(document.body.children[0]);
+    console.log(document.body.children[1]);
+    console.log(document.body.lastElementChild);
+    console.log(document.body.children[1].lastElementChild);
+</script>
+
+//------------
+
+<table id="table">
+    <tr>
+        <td>1:1</td>
+        <td>2:1</td>
+        <td>3:1</td>
+        <td>4:1</td>
+        <td>5:1</td>
+    </tr>
+    <tr>
+        <td>1:2</td>
+        <td>2:2</td>
+        <td>3:2</td>
+        <td>4:2</td>
+        <td>5:2</td>
+    </tr>
+    <tr>
+        <td>1:3</td>
+        <td>2:3</td>
+        <td>3:3</td>
+        <td>4:3</td>
+        <td>5:3</td>
+    </tr>
+</table>
+
+<script>
+
+    // alert(table.rows[0].cells[0].innerHTML);
+    let table = document.getElementById('table');
+    table.rows[0].cells[0].style.backgroundColor = 'red';
+    table.rows[1].cells[1].style.backgroundColor = 'red';
+    table.rows[2].cells[2].style.backgroundColor = 'red';
+
+</script>
+
+// ------------
+
+<div id="text">
+</div>
+
+<div id="js">
+</div>
+
+<div id="djs">
+</div>
+
+<script>
+
+    let obj = {
+        name: "Julia",
+        mood: "Happy",
+        sex: "woman",
+        age: "2020",
+        height: "171",
+        cry: function () {     //cry(){
+            alert("BooBoo")
+        }
+    }
+
+    let domObject = document.getElementById("text");
+    domObject.innerHTML = "<div style='color: green'>Name : " + obj.name + "</div><div>Mood: " + obj.mood + "</div>";
+    //------------
+    let divName = document.createElement("div");
+    divName.innerHTML = "Name:" + obj.name
+    divName.style.color = 'red'
+    let divMood = document.createElement("div");
+    divMood.innerHTML = "Mood:" + obj.mood
+    document.getElementById("js").appendChild(divName).appendChild(divMood)
+    //------------
+    let jsDiv = document.getElementById("djs")
+    for (let key in obj) {
+        if (typeof obj[key] != "function") {
+            let div = document.createElement("div");
+            div.style.color = "gold"
+            div.innerHTML = key + ":" + obj[key]
+            jsDiv.appendChild(div)
+        }
+    }
+    //------------
+
+</script>
+
+//----------------------------------------------------------------------
+
+
+<table id="table1">
+    <tr>
+        <td>Ваш возраст:</td>
+
+        <td>
+            <label> // Screen reader users (will read out loud the label, when the user is focused on the element)
+                <input type="radio" name="age" value="young" checked> младше 18
+            </label>
+            <label>
+                <input type="radio" name="age" value="mature"> от 18 до 50
+            </label>
+            <label>
+                <input type="radio" name="age" value="senior"> старше 60
+            </label>
+        </td>
+    </tr>
+</table>
+
+<script>
+    let inputs = table1.getElementsByTagName('input');
+
+    for (let input of inputs) {
+  //      alert(input.value + ': ' + input.checked);
+    }
+</script>
+
+//---------------------------------------------------------------------------
+
+<script>
+    var person1 = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+            return this.firstName + " " + this.lastName;
+        }
+    };
+</script>
+
+//--------------------------------------------------------------------------
+
+<p id="demo"></p>
+
+<script>
+    // Create an object:
+    var person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue"
+    };
+    // Display some data from the object:
+    document.getElementById("demo").innerHTML =
+        person.firstName + " is " + person.age + " years old.";
+</script>
+
+//-----------------------------------------------------------------
+
+<script>
+    var person = {
+        firstName: "John1",
+        lastName: "Doe1"
+    };
+
+   // alert(
+        person.firstName + " is " + person.lastName
+    );
+</script>
+
+//-----------------------------------------------------------------------
+
+<button onclick="this.innerHTML=Date()">The time is?</button>
+
+//--------------------------------------------------------------------
+
+<button onclick="document.getElementById('demo1').innerHTML=Date()">The time is?</button>
+
+<p id="demo1"></p>
+
+
+//--------------------------------------------------------------------------
+
+<script>
+    let a = (1, 5 - 1) * 2;
+
+   // alert(a);
+
+    //----------------------------------------
+
+    for (var i = 0; i < 10; i++) {
+        console.log(i);
+    }
+
+    //----------------------------------------
+
+    let user1 = {
+        name: "Джон",
+        age: 30
+    };
+
+    user1.sayHi = function() {
+        alert("Привет!");
+    };
+
+    user1.sayHi(); // Привет!
+
+    //----------------------------------------
+
+    let user2 = {
+        name: "Джон",
+        age: 30
+    };
+
+    // сначала объявляем
+    function sayHi() {
+        alert("Привет!");
+    };
+
+    // затем добавляем в качестве метода
+    user2.sayHi = sayHi;
+
+    user2.sayHi(); // Привет!
+
+    //--------------------------------------------------
+
+   let user0 = {
+        sayHi: function() {
+            alert("Привет");
+        }
+    };
+
+   let user00 = {
+        sayHi() { // то же самое, что и "sayHi: function()"
+            alert("Привет");
+        }
+    };
+
+    //--------------------------------------------------
+
+    let user = {
+        name: "Джон",
+        age: 30,
+
+        sayHi() {
+            // this - это "текущий объект"
+            alert(this.name);
+        }
+
+    };
+
+   user.sayHi(); // Джон
+
+
+    //----------------------------------
+
+    let user = { name: "Джон" };
+    let admin = { name: "Админ" };
+
+    function sayHi() {
+        alert( this.name );
+    }
+
+    // используем одну и ту же функцию в двух объектах
+    user.f = sayHi;
+    admin.f = sayHi;
+
+    // вызовы функции, приведённые ниже, имеют разное значение this
+    // "this" внутри функции является ссылкой на объект, который указан "перед точкой"
+    user.f(); // Джон  (this == user)
+    admin.f(); // Админ  (this == admin)
+
+    //-----------------------------------------
+
+    let user = {
+        name: "Джон",
+        hi() { alert(this.name); },
+        bye() { alert("Пока"); }
+    };
+
+    user.hi(); // Джон //  obj.method()
+
+    //-------------------------------------
+
+    let user = {
+        firstName: "Илья",
+        sayHi() {
+            let arrow = () => alert(this.firstName);  // Стрелочные функци
+            arrow();
+        }
+    };
+
+    user.sayHi(); // Илья
+
+    //------------------------------------
+// user.ref() вызывается как метод. И значением this становится объект перед точкой ..
+    function makeUser() {
+        return {
+            name: "Джон",
+            ref() {
+                return this;
+            }
+        };
+    };
+
+    let user = makeUser();
+
+    alert( user.ref().name ); // Джон
+
+    //------------------------------------
+
+    let calculator = {
+
+    };
+
+    calculator.read();
+    alert( calculator.sum() );
+    alert( calculator.mul() );
+
+
+</script>
+
+
+</body>
+</html>

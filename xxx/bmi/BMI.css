@@ -1,0 +1,60 @@
+body {
+    /*margin: 0 15%;*/
+
+    font-family: Georgia, serif;
+    font-size: 100%;
+    line-height: 175%;
+
+    color: black;
+    background-color: beige;
+    /* border: 10px solid cornsilk;*/
+    /*border-radius: 5px;*/
+    /*opacity: 1;*/
+}
+
+h1 {
+    text-align: center;
+    font: bold 1.5em "Marck Script", Georgia, serif;
+    /*font-family: "Marck Script", Georgia, serif;
+font-size: 1.5em;*/
+    /*основной заголовок (h1) в 1.5 раза больше, чем размер основной части текста*/
+    text-shadow: 0.1em 0.1em 0.2em lightslategray;
+}
+
+
+#button_standard,
+.fieldset-standard{
+    background-color: #b3d4fc
+}
+
+#button_metric,
+.fieldset-metric {
+    background-color: cornflowerblue
+}
+
+#button_Compute_BMI{
+    background-color: lightseagreen
+}
+
+
+/*------Footer----------------------------------------*/
+.footer {
+    background-color: cornsilk;
+}
+
+.footer_row {
+    display: flex;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_text {
+    color: cadetblue;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+}
+
+/*--------------------------------------------------------------*/
+
+

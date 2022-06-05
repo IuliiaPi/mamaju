@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validation</title>
+</head>
+<body>
+
+
+<div>
+    <input id="city" type="text" name="city" value="">&nbsp;<span id="message" style="color: sandybrown">:)</span>
+</div>
+<div>---</div>
+<button id="qq">Save</button>
+
+<script>
+    let button = document.getElementById('qq');
+    let div = document.getElementById('x');
+    let city = document.getElementById("city");
+    let message = document.getElementById('message');
+
+    button.onclick = function () {
+        const error = "Please enter your city"
+        const ok = "Great Job!"
+        if (city.value.trim() === "") {
+            message.innerHTML = error;
+            message.style.color = "red";
+        }
+        else {
+            message.innerHTML = ok;
+            message.style.color = "green";
+        }
+        alert(city.value)
+    }
+
+</script>
+
+
+</body>
+</html>
+
+
+

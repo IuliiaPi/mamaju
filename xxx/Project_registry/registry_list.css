@@ -1,0 +1,231 @@
+body {
+    font-family: Georgia, serif;
+    font-size: 100%;
+    line-height: 175%;
+
+    background-color: honeydew;
+    margin: 0;
+}
+
+#intro_registry {
+    background-color: #b3d4fc;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#intro {
+    margin: 2em 0 1em;
+}
+
+#intro h1 {
+    font-size: 1.5em;
+    color: #993399;
+    text-shadow: .1em .1em .2em lightslategray;
+
+    margin-bottom: 0;
+}
+
+#intro h2 {
+    font-size: 1em;
+    color: #57b1dc;
+
+    margin-top: -10px;
+}
+
+#intro p {
+    text-align: center;
+    margin: 1em;
+}
+
+#search{
+    text-align: right;
+    color: #57b1dc;
+}
+
+.category-list {list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 500px; /*???*/
+    border: 1px solid green;
+    color: #00A000;
+}
+
+.category-list li  {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+.category-main_list li {
+    color: black;
+
+}
+/*
+#months {
+    background-color: #FFF;
+    line-height: 1.5em;
+    padding: 1em;
+
+    border: double #FFBC53;
+
+    margin: 1em;
+
+    clear: both;
+    overflow: hidden;
+}
+
+#months h1 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #F26521;
+    text-shadow: .1em .1em .2em lightslategray;
+
+    border-top: 1px solid;
+    border-left: 3px solid;
+    padding-left: 1em;
+
+    margin-top: 1.5em;
+    clear: left;
+}
+
+.info p {
+    border-left: deepskyblue .5em solid;
+}
+
+#testimonials {
+    background: #FFBC53 url("../img/butterfly2.jpg") no-repeat left top;
+    background-size: 3%; /*change?????*/
+
+/*
+    color: #633;
+    font-size: .875em;
+    line-height: 1.5em;
+
+    padding: 1em;
+    padding-left: 55px;
+
+    border: double #FFBC53;
+    border-radius: 20px;
+
+    margin: 1em 10%;
+
+}
+
+#testimonials h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #F26521;
+    border: 2px dotted coral;
+    padding-left: 1em;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    padding-bottom: .1em;
+}
+
+#months img {
+    float: left;
+    margin: 0 6px 6px 0;
+}
+
+#months p.more {
+    clear: left;
+}
+
+span.disclaimer {
+    float: right;
+    margin: 10px;
+    width: 200px;
+    color: gold;
+    background-color: cornsilk;
+    padding: 4px;
+}
+
+#testimonials p {
+    padding: 15px;
+    border: 2px solid #57b1dc;
+}
+
+p#float {
+    float: left;
+    width: 200px;
+    margin-top: 0px;
+    background: #d2dc9d;
+}
+*/
+#nav ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 15em;
+    /* width: 31em;*/
+}
+
+#nav ul li {
+    float: left;
+}
+
+#nav {
+    overflow: hidden;
+    width: 100%;
+}
+
+#nav ul li a {
+    display: block;
+    padding: .5em;
+    border: 1px solid #ba89a8;
+    border-radius: .5em;
+    margin: .25em;
+}
+
+#nav ul a:focus {
+    color: #fc6;
+    border-color: #fff;
+}
+
+#nav ul a:hover {
+    color: #fc6;
+    border-color: #fff;
+}
+#nav_1 ul li {
+    display: ;
+}
+
+
+
+
+footer{
+    text-align: right;
+    color: darkorange;
+   background-image: url("../img/yellow.JPG");
+    margin-top: 30px;
+    border-bottom: 1px solid #57b1dc
+}
+
+#footer{
+    clear: left;
+    color: #0d47a1;
+    text-align: center;
+}
+
+#award {
+    position: absolute;
+    top: 35px;
+    left: 25px;
+}
+
+/*Необходимый порядок следования псевдоклассов таков: :link, :visited, :focus, :hover, :active.*/
+/*
+a:link{
+    color: maroon;}
+a:visited{color: blue;}
+input:focus{background-color: yellow;}
+a:hover{color: maroon;
+    background-color: #ffd9d9;} /*for sensor screen doesn't work*/
+/*
+a:active{color: red;
+    background-color: #ffd9d9;}
+*/

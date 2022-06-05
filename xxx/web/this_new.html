@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this</title>
+</head>
+<body>
+
+<script>
+    let admin = {
+        name: "Julia",
+        age: "ok"
+    };
+    let user = {
+        name: "Anna",
+        age: 4,
+        ride(){
+            alert("Bike");
+            alert(this.name);
+        },
+        read:function () {
+            alert("Books");
+        }
+    };
+    user.ride();
+    user.read();
+
+    // 3  -------------------------------------------------------
+
+    // пользователь может совершать действия:
+    user.play = function () {
+alert("Go");
+    };
+// вызвали её. Теперь пользователь может Go
+    user.play(); // Go
+
+    // 4  -------------------------------------------------------
+
+    // сначала объявляем
+    function say() {
+        alert("Hello");
+        alert(this.name);
+    };
+
+    // затем добавляем в качестве метода
+    user.say = say;
+admin.say = say;
+
+    user.say(); // Hello
+    admin.say();
+
+</script>
+
+</body>
+</html>

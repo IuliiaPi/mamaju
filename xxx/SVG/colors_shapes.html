@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Colors</title>
+
+
+    <style>
+        body {
+            font-family: Georgia, serif;
+            font-size: 100%;
+            line-height: 175%;
+
+            background-color: beige;
+            margin: 0 2%;
+            /* border: 1px solid #9acd32;*/
+        }
+
+        h1 {
+            text-align: left;
+            font: bold 1.5em "Marck Script", Georgia, serif;
+            /*font-family: "Marck Script", Georgia, serif;
+        font-size: 1.5em;*/
+            /*основной заголовок (h1) в 1.5 раза больше, чем размер основной части текста*/
+            /* text-shadow: .1em .1em .2em lightslategray;*/
+        }
+
+        #message {
+            text-align: left;
+            font: bold 1em "Marck Script", Georgia, serif;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1> Click the correct shapes to continue the patterns. </h1>
+
+<svg width="900" height="100">
+    <ellipse cx="50" cy="40" rx="40" ry="20"
+             style="fill:yellow; stroke:black; stroke-width:3;"/>
+    <circle cx="150" cy="40" r="25"
+            stroke="black" stroke-width="3" fill="pink"/>
+    <ellipse cx="250" cy="40" rx="40" ry="20"
+             style="fill:yellow; stroke:black; stroke-width:3;"/>
+    <rect x="320" y="20" width="70" height="40"
+          style="fill:white; stroke:black; stroke-width:3; opacity:0.5 "
+           id="white_shape"/>
+
+
+    <line id="line" x1="420" y1="0" x2="420" y2="100"
+          stroke="red" stroke-width="5" opacity="0.5"/>
+
+
+    <ellipse cx="500" cy="40" rx="40" ry="20"
+             stroke="black" stroke-width="3" fill="yellow" class="incorrect"/>
+    <circle cx="600" cy="40" r="25"
+            stroke="black" stroke-width="3" fill="pink" id="correct"/>
+    <circle cx="700" cy="40" r="25"
+            stroke="black" stroke-width="3" fill="yellow" class="incorrect"/>
+    <ellipse cx="800" cy="40" rx="40" ry="20"
+             stroke="black" stroke-width="3" fill="yellow" class="incorrect"/>
+
+</svg>
+
+<br>
+
+<div id="message"></div>
+
+<script>
+
+    let svg = document.getElementById('white_shape');
+    let button = document.getElementById('correct');
+    let otherButtons = document.getElementsByClassName('incorrect');
+
+    button.onclick = function () {
+        message.innerHTML = "Good job!";
+        message.style.color = "green";
+        svg.style = button.style;
+    }
+
+    for (const otherButton of otherButtons) {
+        // for (let i = 0; i < otherButtons.length; i++) {
+        //     const otherButton = otherButtons[i];
+        // console.log(otherButtons)
+        otherButton.onclick = function () {
+            message.innerHTML = "Please try again";
+            message.style.color = "sandybrown";
+            // svg.style = ;
+        }
+    }
+</script>
+
+</body>
+</html>
+
+
+
+stroke="black" stroke-width="3" fill="white" opacity="0.5"
+
+
+
+<h1> Click the correct colors to continue the patterns. </h1>
+
+<svg width="900" height="100">
+    <defs>
+        <g id="shape">
+            <circle cx="0" cy="0" r="40"
+                    stroke="green" stroke-width="4" opacity="0.5"/>
+        </g>
+    </defs>
+    <use xlink:href="#shape" x="50" y="50" fill="blue"/>
+    <use xlink:href="#shape" x="150" y="50" fill="red"/>
+    <use xlink:href="#shape" x="250" y="50" fill="blue"/>
+    <use xlink:href="#shape" x="350" y="50" style="fill: white;" id="white_circle"/>
+
+    <line id="line" x1="420" y1="0" x2="420" y2="100"
+          stroke="red" stroke-width="5" opacity="0.5"/>
+
+    <use xlink:href="#shape" x="500" y="50" fill="pink" class="incorrect"/>
+    <use xlink:href="#shape" x="600" y="50" style="fill: red;" id="circle"/>
+    <use xlink:href="#shape" x="700" y="50" fill="blue" class="incorrect"/>
+    <use xlink:href="#shape" x="800" y="50" fill="purple" class="incorrect"/>
+
+</svg>
+
+

@@ -1,0 +1,94 @@
+<!--<script>-->
+<!--    let x1 = function () {-->
+<!--        console.log('x1');-->
+<!--        x2();-->
+<!--        console.log('END');-->
+<!--    };-->
+
+<!--    let x2 = function () {-->
+<!--        console.log('x2');-->
+<!--    };-->
+<!--    x1();-->
+<!--</script>-->
+
+<!--<script>-->
+<!--    (function (){-->
+<!--        console.log(1);-->
+
+<!--        setTimeout(function (){-->
+<!--            console.log(2);-->
+<!--        },1000);-->
+
+<!--        setTimeout(function (){-->
+<!--            console.log(3);-->
+<!--        },0);-->
+
+<!--        console.log(4);-->
+<!--    })();-->
+<!--</script>-->
+
+<!--<script>-->
+<!--    var num=2;-->
+<!--    function func(num){-->
+<!--       var num;-->
+<!--        console.log(num);  // 10-->
+<!--        num=5;-->
+<!--        console.log(num); // 5-->
+<!--    }-->
+<!--    console.log(num); // 2-->
+<!--func(10);-->
+<!--    console.log(num); // 2-->
+<!--</script>-->
+
+<!--// 2 10 5 2-->
+
+
+<!--<script>-->
+<!--    let num=2;-->
+<!--    function func(num){-->
+<!--        console.log(num);  // 10-->
+<!--        num=3;-->
+<!--        console.log(num);  // 3-->
+<!--        num=4;-->
+<!--        console.log(num); // 4-->
+<!--    }-->
+<!--    console.log(num); // 2-->
+<!--    func(10);-->
+<!--    console.log(num); // 2-->
+<!--</script>-->
+
+<!--// 2 10 3 4 2-->
+
+<!--<script>-->
+<!--    let iife = (function (){-->
+<!--        return 1;-->
+<!--    })();-->
+<!--    console.log(iife);-->
+<!--</script>-->
+
+<script>
+    let iife = (function () {
+        return 1;
+    })();
+    console.log(iife);
+
+
+    function dec() {
+        console.log("dec");
+    }
+
+    dec();
+
+
+    let exp = function () {
+        console.log('exp');
+    };
+    exp();
+
+
+    let arrow = () => {
+        console.log('arrow');
+    };
+    arrow();
+</script>
+

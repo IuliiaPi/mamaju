@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>table_JS</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        table {
+            background-color: cadetblue;
+        }
+
+        #red_text {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<div id="xxx" title="V">
+    Ju
+    <div></div>
+</div>
+<div id="table">
+</div>
+<div id="text">
+</div>
+<div id="div">
+</div>
+<div id="red_text">
+</div>
+
+
+<script>
+    console.log(document.getElementById("xxx").innerHTML);
+    console.log(document.getElementById("xxx").innerText);
+    console.log(document.getElementById("xxx").childNodes);
+    console.log(document.getElementById("xxx").title);
+
+    let div = "<div>Yeah!</div>"
+    document.getElementById("xxx").innerHTML = div
+</script>
+
+
+<script>
+    let text1 = document.getElementById("text");
+    text1.innerHTML = "Valentyn"
+</script>
+
+<script>
+    let div1 = document.getElementById("div");
+    div1.innerHTML = "<div>learning</div>"
+</script>
+
+<script>
+    let red_text1 = document.getElementById("red_text");
+    red_text1.innerHTML = "<div style=\"color: red\"> redtext </div>"
+</script>
+
+
+<script>
+    let tableDiv = document.getElementById("table");
+    tableDiv.innerHTML = "<table border=\"2\" width=\"70%\">" + generateBody(3) + "</table>"
+
+
+    function generateBody(size) {
+        let body = "";
+        let n = 1;
+        for (let i = 0; i < size; i++) {
+            body = body + "<tr>"
+            for (let j = 0; j < size; j++) {
+                if (n % 2 === 0) {
+                    body = body + "<td>XX</td>"
+                }
+                else if (n % 3 === 0) {
+                    body = body + "<td>XXX</td>"
+                }
+                else {
+                    body = body + "<td>" + n + "</td>"
+                }
+                n = n + 1;
+            }
+            body += "</tr>"
+        }
+        return body;
+    }
+
+    function changeColor(cell) {
+        if (cell.innerHTML === "X") {
+            cell.innerHTML = "0";
+            cell.style.backgroundColor = "green";
+        } else {
+            cell.innerHTML = "X";
+            cell.style.backgroundColor = "red";
+        }
+    }
+</script>
+
+
+</body>
+</html>

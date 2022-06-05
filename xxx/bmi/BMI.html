@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+    <link rel="stylesheet" href="BMI.css">
+</head>
+<body>
+
+<!--Header-->
+<header class="header">
+
+<h1> Body mass index </h1>
+
+</header>
+
+<!--Main Area-->
+<main>
+
+    <header class="main-header">
+<button id="button_standard" onclick="show('standard')"> STANDARD</button>
+<button id="button_metric" onclick="show('metric')"> METRIC</button>
+
+    </header>
+
+    <article>
+<section class="standard">
+    <fieldset class="fieldset-standard">
+        <li>
+            Your Height :
+            <br>
+            <label for="form-height_s_feet"> </label>
+            <input name="form-height_s_feet" maxlength="2" id="form-height_s_feet" value="5"> <span> feet </span>
+            <br>
+            <label for="form-height_s_inch"> </label>
+            <input name="form-height_s_inch" maxlength="2" id="form-height_s_inch" value="7"> <span> inches </span>
+        </li>
+
+        <li>
+            <label for="form-weight_s"> Your Weight : </label>
+            <br>
+            <input name="form-weight_s" maxlength="3" id="form-weight_s" value="120"> <span> pounds </span>
+        </li>
+    </fieldset>
+</section>
+
+<section class="metric">
+    <fieldset class="fieldset-metric">
+        <li>
+            <label for="form-height_m"> Your Height : </label>
+            <input name="form-height_m" maxlength="3" id="form-height_m" value="171"> <span> cm </span>
+        </li>
+
+        <li>
+            <label for="form-weight_m"> Your Weight : </label>
+            <input name="form-weight_m" maxlength="3" id="form-weight_m" value="52"> <span> kg </span>
+        </li>
+    </fieldset>
+</section>
+
+<button id="button_Compute_BMI" onclick="calculate()"> Compute BMI</button>
+
+<br> <br>
+
+<label for="form-BMI"> Your BMI : </label>
+<input name="form-BMI" id="form-BMI" value=" ">
+
+<br>
+
+<div id="message"></div>
+
+<div class="standard">
+    <label for="form-weight_s_n"> Your normal weight : </label>
+    <input name="form-weight_s_n" id="form-weight_s_n" value=" "> pounds
+</div>
+
+<div class="metric">
+    <label for="form-weight_m_n"> Your normal weight : </label>
+    <input name="form-weight_m_n" id="form-weight_m_n" value=" "> kg
+</div>
+
+
+<p>
+    <strong> BMI Categories: </strong> <br>
+    Underweight =< 18.5 <br>
+    Normal weight = 18.5-24.9 <br>
+    Overweight = 25-29.9 <br>
+    Obesity = BMI of 30 or greater
+</p>
+
+    </article>
+
+</main>
+
+<!--Footer-->
+<footer class="footer">
+
+        <div class="container">
+            <div class="footer_row">
+        <div class="footer_text"> 2020 SunFlower. All Rights Reserved </div>
+    </div>
+        </div>
+
+</footer>
+
+
+<script src="BMI.js"> </script>
+
+
+</body>
+</html>
+
+<!--
+
+<li>
+    <label for="form-age"> Age : </label>
+    <input name="age" id="form-age">
+</li>
+<br>
+
+<p> Age :
+    <select name="age">
+        <option>kid</option>
+        <option>adult (>20) </option>
+        <option value="b">bisexual</option>   <!--form otpravit b na servis-->
+
+

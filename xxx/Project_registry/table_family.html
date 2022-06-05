@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+    <style type="text/css">
+        td, th {
+            border: 1px solid #CCC
+        }
+
+        <!--
+        padding: auto
+
+        ;
+        -->
+        <!--
+        расстояние между содержимым ячейки и ее границей
+
+        -->
+
+        table {
+            border: 1px solid black
+        }
+
+        <!--
+        border-collapse: separate
+
+        ;
+        -->
+        <!--
+        border-spacing:
+
+        1
+        px
+
+        ;
+        -->
+        <!--
+        расстояние между ячейками-- >
+
+    </style>
+</head>
+<body>
+
+<table>
+    <caption>Informations about family</caption>
+    <tr>
+        <th rowspan="2" colspan="2"></th>
+        <th colspan="3">Family</th>
+    </tr>
+    <tr>
+        <th id="daddy">daddy</th>
+        <th>mommy</th>
+        <th>baby</th>
+    </tr>
+    <tr>
+        <th rowspan="3">Information</th>
+        <th>name</th>
+        <td headers="daddy">Valentyn</td>
+        <td>Iuliia</td>
+        <td>Anna</td>
+    </tr>
+
+    <tr>
+        <th scope="row">phone</th>
+        <!--scope сопоставляет заголовок таблицы со строкой, столбцом-->
+        <td>2019367694</td>
+        <td>2016801769</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <th>email</th>
+        <td>Valentine.V5k@gmail.com</td>
+        <td>Julia.pidlisna@gmail.com</td>
+        <td></td>
+    </tr>
+
+
+</table>
+
+</body>
+</html>

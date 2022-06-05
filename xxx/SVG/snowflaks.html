@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snowflaks</title>
+
+    <style>
+        body {
+            background-color: lightskyblue;
+        }
+
+        #field {
+            height: 700px;
+            border-bottom: 5px white groove;
+            position: relative;
+        }
+
+        #snow {
+            position: absolute;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="field">
+
+    <svg id="snow" width="500" height="900">
+        <symbol id="snowflake" viewBox="0 0 500 900" stroke="white" stroke-width="3" opacity="0.5">
+            <line x1="60" y1="20" x2="60" y2="100"/>
+            <line x1="20" y1="60" x2="100" y2="60"/>
+            <line x1="30" y1="30" x2="90" y2="90"/>
+            <line x1="90" y1="30" x2="30" y2="90"/>
+        </symbol>
+
+        <use xlink:href="#snowflake" x="0" y="0"/>
+        <use xlink:href="#snowflake" x="100" y="0"/>
+        <use xlink:href="#snowflake" x="200" y="0"/>
+        <use xlink:href="#snowflake" x="300" y="0"/>
+        <use xlink:href="#snowflake" x="400" y="0"/>
+
+    </svg>
+
+</div>
+
+<script>
+    //let requestId = requestAnimationFrame(callback);
+    //let start = performance.now();
+
+    snow.onclick = function () {
+        let start = Date.now();
+        let timer = setInterval(function () {
+            let timePassed = Date.now() - start;
+            snow.style.top = timePassed / 5 + "px";
+            if (timePassed > 2000) clearInterval(timer);
+            //   snow();
+            //  snow_2();
+        }, 20);
+    }
+
+</script>
+
+</body>
+</html>
+
+
+

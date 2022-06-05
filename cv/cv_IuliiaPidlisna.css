@@ -1,0 +1,17 @@
+figure {
+    width: 100%;
+    height: 400px;
+    margin: 0;
+}
+
+figure img {
+    width: 30%;
+    /*height: 30%;*/
+    object-fit: cover;
+
+}
+
+.rs_school_img{
+    width: 50px;
+    height: 100px;
+}

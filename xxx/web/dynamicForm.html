@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Form</title>
+</head>
+<body>
+<!--
+<div><input type="text" name="name" value="Julia"></div>&nbsp;<span id="message" style="color: sandybrown">:)</span>
+<div><input type="text" name="sex" value="female"></div>
+<div><input type="text" name="weight" value="49"></div>
+<div><input type="text" name="height" value="170"></div>
+-->
+<div><input id="content1" type="text" name="name" value="">
+
+<div id="content"></div>
+<div>
+    <button id="button">Save</button>
+</div>
+
+<script>
+
+    let button = document.getElementById('button');
+    let div = document.getElementById('content');
+
+    const template = {
+        name: "Julia",
+        sex: "female",
+        weight: 49,
+        height: 170
+    }
+
+    for (let key in template) {
+        div.innerHTML = template [key];
+    }
+
+</script>
+</body>
+</html>
+
+
+for (let key in template) {
+alert( template [key] )
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OnClick</title>
+</head>
+
+<body>
+
+<div id="x">X</div>
+<button id="qq">Go</button>
+
+<script>
+    let a = document.getElementById('qq');
+    let div = document.getElementById('x');
+    let i = 1;
+
+    a.onclick = function () {
+        div.innerHTML = i;
+        i++
+    }
+
+</script>
+
+</body>
+
+</html>
+

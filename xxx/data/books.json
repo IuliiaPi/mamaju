@@ -1,0 +1,24 @@
+[
+    {
+        age: 0,
+        books: [
+            {
+                name: "First 100 animals (priddy books)"
+                description: "Essential animals words, great pictures to look at, and a soft,padded cover make this an ideal first book for babies and toddlers."
+            }
+        ]
+    },
+    {
+        age: 2,
+        books: [
+            {
+                name: "I Am a Bunny by Richard Scarry (Illustrator)"
+                description: "In the spring, Nicholas likes to sniff the flowers, and in the summer, watch the frogs in the pond. In the fall, he watches the animals getting ready for winter, and in winter, watches the snow falling from the sky. This beautifully illustrated, gentle story is one of Golden’s most beloved titles."
+            },
+            {
+                name: "Yoga Bug: Simple Poses for Little Ones by Sarah Jane Hinder"
+                description: "Flutter, wiggle, jiggle - it's never too early to introduce children to the fun and healthy joys of yoga."
+            }
+        ]
+    }
+]

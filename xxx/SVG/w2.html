@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web</title>
+
+    <style>
+        body {
+            background-color: lightskyblue;
+        }
+
+        #field {
+            height: 800px;
+            border-bottom: 3px limegreen groove;
+            position: relative;
+        }
+
+        #spider {
+            position: absolute;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div id="field">
+
+    <svg width="400" height="600">
+
+        <g id="snow" x="100" y="0" stroke="white" stroke-width="3" opacity="0.5">
+            <line x1="100" y1="0" x2="100" y2="200"/>
+            <line x1="0" y1="100" x2="200" y2="100"/>
+            <line x1="25" y1="25" x2="175" y2="175"/>
+            <line x1="175" y1="25" x2="25" y2="175"/>
+        </g>
+    </svg>
+
+    <svg id="spider" width="400" height="700">
+        <path stroke="white" stroke-width="1" d="M10 0 V700" id="xxx"/>
+        <g>
+            <animateMotion dur="5.6s" repeatCount="indefinite">
+                <mpath xlink:href="#xxx"></mpath>
+            </animateMotion>
+            <line id="thread" x1="200" y1="0" x2="200" y2="280"
+                  stroke="white" stroke-width="3" opacity="0.5"/>
+
+            <ellipse cx="200" cy="300" rx="50" ry="25"
+                     style="fill:gray; stroke:black; stroke-width:2;"/>
+
+            <circle class="eye" cx="215" cy="310" r="7" fill="cornflowerblue"
+                    style="stroke: black;stroke-width: 1px;"
+            />
+            <circle class="eye" cx="185" cy="310" r="7" fill="cornflowerblue"
+                    style="stroke: black;stroke-width: 1px;"
+            />
+
+            <g id="legs" stroke="black" stroke-width="2px" fill="none">
+                <polyline
+                    points="240,285 300,255 350,300"/>
+                <polyline
+                    points="245,290 300,270 345,310"/>
+                <polyline
+                    points="250,300 300,285 340,320"/>
+                <polyline
+                    points="245,310 300,300 335,330"/>
+
+                <polyline
+                    points="160,285 110,255 50,300"/>
+                <polyline
+                    points="155,290 110,270 55,310"/>
+                <polyline
+                    points="150,300 110,285 60,320"/>
+                <polyline
+                    points="155,310 110,300 65,330"/>
+            </g>
+        </g>
+    </svg>
+
+
+</div>
+
+<script>
+    let spider = document.getElementById("spider");
+    // spider.onclick = function () {
+    //     let start = Date.now();
+    //     let timer = setInterval(function () {
+    //         let timePassed = Date.now() - start;
+    //         spider.style.top = timePassed / 5 + "px";
+    //
+    //         console.log(spider.style.top)
+    //         if (timePassed > 2000) clearInterval(timer);
+    //     }, 20);
+    // }
+
+    Array.from(document.getElementsByClassName('eye')).forEach(e => {
+        e.onmouseover = function () {
+            e.setAttribute('r', '2');
+            e.setAttribute('fill', 'yellow')
+        }
+        e.onmouseout = function () {
+            e.setAttribute('r', '7');
+            e.setAttribute('fill', 'cornflowerblue')
+        }
+    })
+
+    function thread() {
+        document.getElementById("thread").setAttribute('x2', '');
+    }
+
+
+</script>
+
+</body>
+</html>

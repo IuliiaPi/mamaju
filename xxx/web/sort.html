@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sort</title>
+</head>
+<body>
+
+<script>
+
+let arr = [7,2,0,23,18];
+    arr.sort(function (a,b) {
+return a-b;
+    });
+
+// arr.sort( (a, b) => a - b );  // стрелочные функции
+
+    alert(arr);
+
+</script>
+
+// -----------------------------------------
+
+<script>
+
+    let arr1 = [7,2,0,23,18];
+    arr1.sort(function (a,b) {
+        return a-b;
+    });
+    arr1.reverse();
+
+    // arr.sort((a, b) => b - a);
+
+    alert(arr1);
+
+</script>
+
+   // -----------------------------------------
+<script>
+
+let arr2 = ["Я", "изучаю", "JavaScript"];
+
+// с позиции 2
+// удалить 0 элементов
+// вставить "сложный", "язык"
+arr2.splice(2, 0, "сложный", "язык");
+
+alert( arr2 ); // "Я", "изучаю", "сложный", "язык", "JavaScript"
+
+</script>
+
+
+</body>
+</html>
+
+
+function compare(a,b) {
+if (a>b)return 1;
+if (a==b)return 0;
+if (a<b)return -1;
+}
+
+
+[1, -2, 15, 2, 0, 8].sort(function(a, b) {
+alert( a + " <> " + b );
+});

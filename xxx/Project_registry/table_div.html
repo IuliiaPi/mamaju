@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>DIV</title>
+    <style type="text/css">
+        .table{
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .row{
+            display: table-row;
+        }
+        .cell {
+            display: table-cell;
+            /*border: none;*/
+            border: 1px solid black;
+            text-align: center;
+            vertical-align: middle;
+           /*float: left;*/
+        }
+        .table_D{
+            display: table;
+            width: 100%;
+            border: none;
+            border-color: yellow;
+        }
+        .cell_0 {
+            display: table-cell;
+            /*border: none;*/
+
+            border: none;
+            text-align: center;
+            border-collapse: separate;
+            border: 1px solid cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+<div class="table">
+    <div class="row">
+        <div class="cell">A1</div>
+        <div class="cell">A2</div>
+    </div>
+    <div class="row">
+    <div class="cell">B1</div>
+    <div class="cell">B2</div>
+</div>
+    <div class="row">
+        <div class="cell">C1</div>
+        <div class="cell">C2</div>
+        <div class="cell">C3</div>
+    </div>
+
+    <div class="row">
+
+        <div class="table_D">
+        <div class="row">
+            <div class="cell_0">D11</div>
+            <div class="cell_0">D12</div>
+            <div class="cell_0">D13</div>
+        </div>
+            <div class="row">
+                <div class="cell">D11</div>
+                <div class="table">
+                    <div class="row">
+                        <div class="cell_0">D0</div>
+                        <div class="cell_0">D0</div>
+                        </div>
+                </div>
+                <div class="cell">D12</div>
+                <div class="cell">D13</div>
+                <div class="cell">D14</div>
+            </div>
+        </div>
+        <div class="cell">D2</div>
+        <div class="cell">D3</div>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let array = [1, 2, 9, 3, 4, 6, 8];
+
+    let index_max = 0;
+    let index_min = 0
+
+    let str = array[0] + " "
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] > array[index_max]) {
+            index_max = i
+        }
+        if (array[i] < array[index_min]) {
+            index_min = i
+        }
+        str += array[i] + " "
+    }
+    console.log(str)
+
+    let x = array[index_max];
+    array[index_max] = array[index_min];
+    array[index_min] = x;
+
+    let str_new = array[0] + " "
+    for (let i = 1; i < array.length; i++) {
+        str_new += array[i] + " "
+    }
+    console.log(str_new)
+
+    let str_back = array[array.length - 1] + " "
+    for (let i = array.length - 2; i >= 0; i--) {
+        str_back += array[i] + " "
+    }
+    console.log(str_back)
+
+    up([7, 2, 9, 3, 4, 6, 8])
+
+
+    function up(array) {
+        for (let i = 0; i < array.length - 1; i++) {
+            if (array[i] > array[i + 1]) {
+                let tmp = array[i + 1]
+                array[i + 1] = array[i]
+                array[i] = tmp
+            }
+        }
+        print(array)
+    }
+
+    function print(array) {
+        let str = ""
+        for (let i = 0; i < array.length; i++) {
+            str += array[i] + " "
+        }
+        console.log(str)
+    }
+
+</script>
+
+</body>
+</html>
+

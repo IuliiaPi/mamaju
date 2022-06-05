@@ -1,0 +1,17 @@
+aside {float: right;
+
+     width: 200px;
+     height: 250px;
+     margin-left: .5rem;
+     padding-left: .5rem;
+
+
+     background-color: #AAFFFF;
+     color: #29627e;
+     font-style: italic;
+
+     box-shadow: inset 5px 0 5px -5px #29627e;
+ }
+aside > p {
+    margin: .5rem;
+}

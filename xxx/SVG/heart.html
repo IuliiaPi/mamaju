@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart</title>
+
+    <style>
+        body {
+            background: lavender;
+            height: 100vh;
+            display: flex;
+            align-items: center;   /* center vertical*/
+            justify-content: center; /* center gorizontal*/
+        }
+        svg {
+            background: deepskyblue;
+        }
+    </style>
+
+</head>
+<body>
+
+<svg width="200" height="200" viewBox="0 0 400 400">
+    <g fill="tomato" stroke="tomato" transform="translate (100 100)">
+    <path d="M100,30 A20,30 0 0,1 150,50"/>
+    <path d="M100,30 A20,30 0 1,0 50,50"/>
+    <path d="M50,50 L100,100 L150,50 L100,30 z"/>
+
+    <animateTransform
+        attributeName="transform"
+        type="scale"
+        dur="1s"
+        values="1; 1.5; 1.25; 1.5; 1.5; 1;"
+        repeatCount="indefinite"
+    additive="sum">
+        </animateTransform>
+    </g>
+
+    "Be still my beating heart" - Sting
+
+</svg>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

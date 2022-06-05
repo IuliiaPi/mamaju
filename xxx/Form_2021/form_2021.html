@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form_2021.css">
+</head>
+<body>
+<!-------------------------------------------------------------------------->
+<form class="julia-form" action="./result" method="post" name="Julia" id="julia-register">
+
+    <legend>Please, register to Julia</legend>
+    <!-------------------------------------------------------------------------->
+
+    <fieldset class="questions">
+
+    <label for="name-input" required> Enter Name: </label>
+<input type="text" id="name-input">
+
+    <label for="email-input"> Enter Email: </label>
+    <input type="email" id="email-input" required>
+
+
+    <label for="password-input"> Enter Password: </label>
+        <div class="password">
+            <input type="password" name="password" id="password-input" class="password" required>
+<!--        <img class="eye hidden" id="eye" src="/img/eye.png" alt="hide password">-->
+<!--            <img class="eye-slash" id="eye-slash" src="eye-slash.svc" alt="show password">-->
+        </div>
+
+    <label for="confirm-password-input"> Confirm Password: </label>
+    <input type="password" id="confirm-password-input" required>
+        <!-------------------------------------------------------------------------->
+        <label for="country-select"> Select your country: </label>
+        <select id="country-select">
+            <option value="ua">Ukraine</option>
+            <option value="us">USA</option>
+            <option value="uk">United Kingdom</option>
+        </select>
+
+        <label for="language-select"> Select language: </label>
+        <input list="languages" id="language-select" >
+
+        <label for="color-input"> Select background color: </label>
+        <input type="color" id="color-input">
+
+        <input type="checkbox" id="accept">
+        <label for="accept"> Accept terms and services </label>
+
+    </fieldset>
+<!-------------------------------------------------------------------------->
+<button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <!-------------------------------------------------------------------------->
+</form>
+
+<div id="result"></div>
+<!-------------------------------------------------------------------------->
+<datalist id="languages">
+    <option value="English"></option>
+    <option value="Ukrainian"></option>
+</datalist>
+<!-------------------------------------------------------------------------->
+    <script src="form_2021.js"> </script>
+
+</body>
+</html>
+
+
+<input type="submit" value="1111111111">

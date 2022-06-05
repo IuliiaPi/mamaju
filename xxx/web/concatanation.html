@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String</title>
+</head>
+<body>
+
+<div id="xz">a</div>
+<div id="v" class="yeah">
+    <div>Hello</div>
+    <div>Bay</div>
+    <div>Dream</div>
+</div>
+
+<script>
+    function string(n) {
+        let body = "";
+        for (let i = 1; i < n + 1; i++) {
+            body = body + i + ".."
+        }
+        return body;
+    }
+
+    function hello() {
+        alert("Yeah!")
+    }
+
+    let result = string(10);
+    console.log(result)
+    //1..2..3..4..
+
+    let div = document.getElementById('v');
+
+document.body.style.background = "yellow";
+
+    console.log( document.body.childNodes );
+    for (let node of document.body.childNodes) {
+        alert(node); // покажет все узлы из коллекции
+    }
+
+    div = document.getElementById('xz');
+
+    div.innerHTML = div.innerHTML + "<div onclick='hello()'>d</div>"
+
+    console.log(div.innerHTML)
+
+
+</script>
+
+</body>
+</html>
+
+
